@@ -1,7 +1,7 @@
 public class GuestReviewProcessor {
     @InvocableMethod(
         label='Process Guest Reviews'
-        description='Processes guest reviews and creates campaign members for related campaigns'
+        description='Processes guest reviews and creates campaign members for related campaigns.'
     )
     public static List<GuestReviewResponse> processReviews(List<GuestReviewRequest> requests) {
         List<GuestReviewResponse> responses = new List<GuestReviewResponse>();
@@ -42,28 +42,28 @@ public class GuestReviewProcessor {
         @InvocableVariable(
             required=true
             label='Contact Record'
-            description='The contact associated with the guest review'
+            description='The contact associated with the guest review.'
         )
         public Contact contact;
         
         @InvocableVariable(
             required=true
             label='Experience Record'
-            description='The experience being reviewed'
+            description='The experience being reviewed.'
         )       
         public Experience__c experience;
         
         @InvocableVariable(
             required=true
             label='Review Comments'
-            description='The review comments text'
+            description='The review comments text.'
         )
         public String review;
         
         @InvocableVariable(
             required=true
             label='Rating'
-            description='The rating value for the experience'
+            description='The rating value for the experience.'
         )
         public String rating;
     }
@@ -71,13 +71,13 @@ public class GuestReviewProcessor {
     public class GuestReviewResponse {
         @InvocableVariable(
             label='Status'
-            description='The status message indicating success or error details of the operation'
+            description='The status message indicating success or error details of the operation.'
         )
         public String message;
         
         @InvocableVariable(
             label='Is Success'
-            description='Boolean indicating whether the operation was successful'
+            description='Boolean indicating whether the operation was successful.'
         )
         public Boolean isSuccess;
     }    
